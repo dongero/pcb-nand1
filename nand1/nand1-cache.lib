@@ -1,28 +1,6 @@
 EESchema-LIBRARY Version 2.4
 #encoding utf-8
 #
-# 4ms-mech_POT
-#
-DEF 4ms-mech_POT RV 0 40 N N 1 F N
-F0 "RV" -200 150 50 V V C CNN
-F1 "4ms-mech_POT" -100 150 50 V V C CNN
-F2 "" 200 -250 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
-$FPLIST
- Potentiometer*
-$ENDFPLIST
-DRAW
-T 900 0 50 10 0 1 1 Left/1 Normal 0 C C
-T 900 0 -50 10 0 1 1 Right/3 Normal 0 C C
-S 40 100 -40 -100 0 1 10 N
-P 2 1 1 0 100 0 60 0 N
-P 3 1 1 0 45 0 90 20 90 -20 F
-X Left 1 0 150 50 D 50 50 1 1 P
-X Center 2 150 0 50 L 50 50 1 1 P
-X Right 3 0 -150 50 U 50 50 1 1 P
-ENDDRAW
-ENDDEF
-#
 # 4ms-passives_CP1_Small
 #
 DEF 4ms-passives_CP1_Small C 0 10 N N 1 F N
@@ -40,6 +18,29 @@ P 2 0 1 0 -50 60 -30 60 N
 P 2 0 1 0 -40 50 -40 70 N
 X ~ 1 0 100 80 D 50 50 1 1 P
 X ~ 2 0 -100 80 U 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# 4ms-passives_LDR
+#
+DEF 4ms-passives_LDR LDR 0 0 N Y 1 F N
+F0 "LDR" -200 0 50 V V C CNN
+F1 "4ms-passives_LDR" 75 0 50 V V C TNN
+F2 "4ms-footprints:LDR_SWASH" 175 0 50 V I C CNN
+F3 "" 0 -50 50 H I C CNN
+$FPLIST
+ Resistor*LDR*10x8.5*RM7.6*
+$ENDFPLIST
+DRAW
+S -40 100 40 -100 0 1 10 N
+P 2 0 1 0 -60 -90 -160 10 N
+P 2 0 1 0 -60 -90 -90 -90 N
+P 2 0 1 0 -60 -90 -60 -60 N
+P 2 0 1 0 -60 -30 -160 70 N
+P 2 0 1 0 -60 -30 -90 -30 N
+P 2 0 1 0 -60 -30 -60 0 N
+X ~ 1 0 150 50 D 50 50 1 1 P
+X ~ 2 0 -150 50 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
@@ -89,6 +90,33 @@ X GND 1 0 0 0 D 50 50 1 1 W N
 ENDDRAW
 ENDDEF
 #
+# 4ms_Potentiometer_TrimPot_T73YEt_10k
+#
+DEF 4ms_Potentiometer_TrimPot_T73YEt_10k TRIM 0 40 Y N 1 F N
+F0 "TRIM" -200 15 50 V V C CNN
+F1 "4ms_Potentiometer_TrimPot_T73YEt_10k" 50 250 50 H I C CNN
+F2 "4ms_Potentiometer:Pot_Trim_7x6.6mm_T73YE" 0 -510 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+F4 "Trimpot, TH, 10k, single turn, square" -100 -310 50 H I L CNN "Specifications"
+F5 "Vishay" -100 -370 50 H I L CNN "Manufacturer"
+F6 "T73YE103KT20" -100 -430 50 H I L CNN "Part Number"
+F7 "10k" -130 5 60 V V C CNN "Display"
+$FPLIST
+ Potentiometer*
+$ENDFPLIST
+DRAW
+T 900 0 50 10 0 1 0 Left/1 Normal 0 C C
+T 900 0 -50 10 0 1 0 Right/3 Normal 0 C C
+S 40 100 -40 -100 0 1 10 N
+P 2 0 1 0 -90 -15 -65 -75 N
+P 2 0 1 0 -75 -45 60 0 N
+P 2 0 1 0 100 0 60 0 N
+X Left 1 0 150 50 D 20 50 1 1 P
+X Center 2 150 0 50 L 20 50 1 1 P
+X Right 3 0 -150 50 U 20 50 1 1 P
+ENDDRAW
+ENDDEF
+#
 # 4xxx_IEEE_4093
 #
 DEF 4xxx_IEEE_4093 U 0 30 Y Y 4 F N
@@ -117,11 +145,11 @@ X ~ 13 -500 -100 300 R 50 50 4 1 I
 ENDDRAW
 ENDDEF
 #
-# zMECH_JACK-DC
+# nand1-rescue_JACK-DC-zMECH
 #
-DEF zMECH_JACK-DC J 0 0 N N 1 F N
+DEF nand1-rescue_JACK-DC-zMECH J 0 0 N N 1 F N
 F0 "J" -250 -300 60 H V C CNN
-F1 "zMECH_JACK-DC" 300 -200 60 H V C CNN
+F1 "nand1-rescue_JACK-DC-zMECH" 300 -200 60 H V C CNN
 F2 "" 0 0 60 H V C CNN
 F3 "" 0 0 60 H V C CNN
 DRAW
@@ -133,11 +161,11 @@ X GND 2 -150 -100 118 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# zMECH_JACK-TIP_GND
+# nand1-rescue_JACK-TIP_GND-zMECH
 #
-DEF zMECH_JACK-TIP_GND J 0 0 N N 1 F N
+DEF nand1-rescue_JACK-TIP_GND-zMECH J 0 0 N N 1 F N
 F0 "J" -250 -300 60 H V C CNN
-F1 "zMECH_JACK-TIP_GND" 300 -200 60 H V C CNN
+F1 "nand1-rescue_JACK-TIP_GND-zMECH" 300 -200 60 H V C CNN
 F2 "" 0 0 60 H V C CNN
 F3 "" 0 0 60 H V C CNN
 DRAW
